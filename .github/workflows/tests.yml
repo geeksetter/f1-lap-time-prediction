@@ -1,4 +1,4 @@
-name: Stage 1 checks
+name: Pipeline checks
 on: [push, pull_request]
 permissions:
   contents: read

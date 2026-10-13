@@ -1,5 +1,6 @@
 """Execute the diagnostic notebook using this interpreter and a private local kernel."""
 
+import argparse
 import json
 import os
 import sys
@@ -30,7 +31,10 @@ os.environ["JUPYTER_PATH"] = str(root / ".local/jupyter")
 os.environ["JUPYTER_RUNTIME_DIR"] = str(root / ".local/jupyter/runtime")
 Path(os.environ["JUPYTER_RUNTIME_DIR"]).mkdir(parents=True, exist_ok=True)
 os.environ["IPYTHONDIR"] = str(root / ".local/ipython")
-path = root / "notebooks/01_data_quality.ipynb"
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument("notebook", nargs="?", default="notebooks/01_data_quality.ipynb")
+args = parser.parse_args()
+path = root / args.notebook
 nb = nbformat.read(path, as_version=4)
 NotebookClient(
     nb, timeout=120, kernel_name="f1", resources={"metadata": {"path": str(root)}}

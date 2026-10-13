@@ -1,0 +1,209 @@
+{
+  "by_compound": [
+    {
+      "compound": "HARD",
+      "drivers": 18,
+      "max_age_laps": 32,
+      "max_lap_number": 66,
+      "median_seconds": 79.774,
+      "min_age_laps": 1,
+      "min_lap_number": 2,
+      "n": 509,
+      "year": 2023
+    },
+    {
+      "compound": "MEDIUM",
+      "drivers": 15,
+      "max_age_laps": 31,
+      "max_lap_number": 66,
+      "median_seconds": 79.8665,
+      "min_age_laps": 1,
+      "min_lap_number": 2,
+      "n": 374,
+      "year": 2023
+    },
+    {
+      "compound": "SOFT",
+      "drivers": 19,
+      "max_age_laps": 25,
+      "max_lap_number": 66,
+      "median_seconds": 80.7855,
+      "min_age_laps": 1,
+      "min_lap_number": 2,
+      "n": 324,
+      "year": 2023
+    },
+    {
+      "compound": "HARD",
+      "drivers": 13,
+      "max_age_laps": 36,
+      "max_lap_number": 66,
+      "median_seconds": 79.86850000000001,
+      "min_age_laps": 1,
+      "min_lap_number": 29,
+      "n": 346,
+      "year": 2024
+    },
+    {
+      "compound": "MEDIUM",
+      "drivers": 19,
+      "max_age_laps": 30,
+      "max_lap_number": 48,
+      "median_seconds": 80.783,
+      "min_age_laps": 1,
+      "min_lap_number": 2,
+      "n": 399,
+      "year": 2024
+    },
+    {
+      "compound": "SOFT",
+      "drivers": 20,
+      "max_age_laps": 25,
+      "max_lap_number": 66,
+      "median_seconds": 81.143,
+      "min_age_laps": 1,
+      "min_lap_number": 2,
+      "n": 421,
+      "year": 2024
+    },
+    {
+      "compound": "HARD",
+      "drivers": 1,
+      "max_age_laps": 10,
+      "max_lap_number": 66,
+      "median_seconds": 78.1015,
+      "min_age_laps": 5,
+      "min_lap_number": 61,
+      "n": 6,
+      "year": 2025
+    },
+    {
+      "compound": "MEDIUM",
+      "drivers": 18,
+      "max_age_laps": 34,
+      "max_lap_number": 66,
+      "median_seconds": 80.959,
+      "min_age_laps": 1,
+      "min_lap_number": 2,
+      "n": 457,
+      "year": 2025
+    },
+    {
+      "compound": "SOFT",
+      "drivers": 19,
+      "max_age_laps": 23,
+      "max_lap_number": 66,
+      "median_seconds": 81.3575,
+      "min_age_laps": 1,
+      "min_lap_number": 2,
+      "n": 526,
+      "year": 2025
+    }
+  ],
+  "by_race": [
+    {
+      "compounds": 3,
+      "drivers": 20,
+      "history_missing": 20,
+      "max_seconds": 83.489,
+      "max_track_c": 33.4,
+      "mean_seconds": 80.15305219552617,
+      "mean_track_c": 30.184838442419316,
+      "median_seconds": 80.178,
+      "min_seconds": 76.33,
+      "min_track_c": 26.8,
+      "n": 1207,
+      "pearson_air_duration": 0.49951977138249976,
+      "pearson_track_duration": 0.7031416856410931,
+      "std_seconds": 1.1829300748353575,
+      "std_track_c": 1.6042213548851514,
+      "year": 2023
+    },
+    {
+      "compounds": 3,
+      "drivers": 20,
+      "history_missing": 20,
+      "max_seconds": 89.605,
+      "max_track_c": 43.6,
+      "mean_seconds": 80.58447169811319,
+      "mean_track_c": 41.18765008576327,
+      "median_seconds": 80.63050000000001,
+      "min_seconds": 77.115,
+      "min_track_c": 38.3,
+      "n": 1166,
+      "pearson_air_duration": -0.003702663843090991,
+      "pearson_track_duration": -0.008320373912251884,
+      "std_seconds": 1.3332162185723686,
+      "std_track_c": 1.1412522905824325,
+      "year": 2024
+    },
+    {
+      "compounds": 3,
+      "drivers": 19,
+      "history_missing": 19,
+      "max_seconds": 90.665,
+      "max_track_c": 49.9,
+      "mean_seconds": 81.00745298281092,
+      "mean_track_c": 48.16390293225484,
+      "median_seconds": 81.043,
+      "min_seconds": 75.743,
+      "min_track_c": 46.5,
+      "n": 989,
+      "pearson_air_duration": 0.3084675794099585,
+      "pearson_track_duration": 0.43705933153334514,
+      "std_seconds": 1.431729611776803,
+      "std_track_c": 0.919206517681022,
+      "year": 2025
+    }
+  ],
+  "checks": {
+    "audit_mismatch": 0,
+    "future_timestamps": 0,
+    "history_mismatch": 0,
+    "missing_required": 0,
+    "rows": 3362,
+    "run_count": 1,
+    "weather_not_latest": 0
+  },
+  "cleaning": [
+    {
+      "accepted": 1207,
+      "excluded": 105,
+      "raw": 1312,
+      "year": 2023
+    },
+    {
+      "accepted": 1166,
+      "excluded": 144,
+      "raw": 1310,
+      "year": 2024
+    },
+    {
+      "accepted": 989,
+      "excluded": 215,
+      "raw": 1204,
+      "year": 2025
+    }
+  ],
+  "feature_columns": [
+    "compound",
+    "tyre_age_before_lap",
+    "air_temperature",
+    "track_temperature",
+    "driver_name",
+    "lap_number",
+    "previous_lap_duration"
+  ],
+  "generated_at": "2026-10-13 21:46:27.165862+00:00",
+  "input_sha256": "96e536ef48c60ffc62f7aaa6a41a6e52aece5bda431cf43868c52a2559c715b6",
+  "output_sha256": "f399331ef2ca4afb40c3e07aef5eaf55a9696fa9669fcb2ed83f408cbb05d1f8",
+  "preparation_run_id": "c65addbc-1b7b-44d9-8f47-9603c0f1e282",
+  "rows": 3362,
+  "sql_source": "sql/006_training_read.sql",
+  "figures": [
+    "figures/01_distribution.png",
+    "figures/02_lap_dynamics.png",
+    "figures/03_compounds.png",
+    "figures/04_temperature.png"
+  ]
+}

@@ -2,16 +2,20 @@ import argparse
 import json
 import logging
 import os
+from pathlib import Path
 
 from .api import OpenF1Client
 from .collect import collect_year
 from .config import ROOT, load_config
 from .db import connect, counts, init_db
+from .prepare import prepare_dataset
 from .quality import write_report
 
 
 def main():
-    parser = argparse.ArgumentParser(description="OpenF1 -> PostgreSQL (stage 1)")
+    parser = argparse.ArgumentParser(
+        description="OpenF1 -> PostgreSQL -> ordinary laps -> EDA"
+    )
     parser.add_argument("--verbose", action="store_true")
     sub = parser.add_subparsers(dest="command", required=True)
     sub.add_parser("init-db")
@@ -27,6 +31,13 @@ def main():
     report = sub.add_parser("quality")
     report.add_argument("--output", default=str(ROOT / "reports"))
     sub.add_parser("counts")
+    prepare = sub.add_parser("prepare")
+    prepare.add_argument("--years", nargs="+", type=int, default=[2023, 2024, 2025])
+    prepare.add_argument("--circuit", default="Catalunya")
+    prepare.add_argument("--output", default=str(ROOT / "reports"))
+    prepare.add_argument("--verify-repeat", action="store_true")
+    eda = sub.add_parser("eda")
+    eda.add_argument("--output", default=str(ROOT / "reports"))
     args = parser.parse_args()
     load_config()
     logging.basicConfig(
@@ -51,6 +62,41 @@ def main():
         )
         if any(i["severity"] == "critical" for i in r["issues"]):
             raise SystemExit(2)
+    elif args.command == "prepare":
+        first = prepare_dataset(
+            output=args.output, years=args.years, circuit=args.circuit
+        )
+        if args.verify_repeat:
+            second = prepare_dataset(
+                output=args.output, years=args.years, circuit=args.circuit
+            )
+            proof = {
+                "first_run": first["run_id"],
+                "repeat_run": second["run_id"],
+                "input_hash_equal": first["input_sha256"] == second["input_sha256"],
+                "output_hash_equal": first["output_sha256"] == second["output_sha256"],
+                "counts_equal": first["total"] == second["total"],
+                "before": first["total"],
+                "after": second["total"],
+            }
+            Path(args.output).joinpath("repeat_preparation.json").write_text(
+                json.dumps(proof, indent=2) + "\n"
+            )
+            if not all(
+                proof[k]
+                for k in ("input_hash_equal", "output_hash_equal", "counts_equal")
+            ):
+                raise RuntimeError("Preparation is not repeatable")
+        print(
+            json.dumps({"total": first["total"], "checks": first["checks"]}, indent=2)
+        )
+    elif args.command == "eda":
+        from .eda import write_eda
+
+        result = write_eda(args.output)
+        print(
+            json.dumps({"rows": result["rows"], "figures": result["figures"]}, indent=2)
+        )
     elif args.command == "collect":
         if any(y < 2023 for y in args.years):
             parser.error("OpenF1 history starts in 2023")

@@ -1,0 +1,52 @@
+{
+  "generated_at": "2026-10-13T21:44:26.857559+00:00",
+  "stage": 2,
+  "local_tests_passed": 37,
+  "test_database": "f1_ingestion_test",
+  "raw_counts": {
+    "meetings": 3,
+    "sessions": 3,
+    "drivers": 59,
+    "laps": 3826,
+    "stints": 198,
+    "weather": 463,
+    "race_control": 258
+  },
+  "audited_rows": 3826,
+  "training_checks": {
+    "rows": 3362,
+    "future_timestamps": 0,
+    "missing_required": 0,
+    "audit_mismatch": 0,
+    "history_mismatch": 0,
+    "weather_not_latest": 0,
+    "run_count": 1
+  },
+  "repeat_preparation": {
+    "first_run": "752d3a81-0154-4116-93b8-33e95f485adf",
+    "repeat_run": "c65addbc-1b7b-44d9-8f47-9603c0f1e282",
+    "input_hash_equal": true,
+    "output_hash_equal": true,
+    "counts_equal": true,
+    "before": {
+      "accepted": 3362,
+      "excluded": 464,
+      "excluded_share": 0.12127548353371667,
+      "raw": 3826
+    },
+    "after": {
+      "accepted": 3362,
+      "excluded": 464,
+      "excluded_share": 0.12127548353371667,
+      "raw": 3826
+    }
+  },
+  "notebook": {
+    "path": "notebooks/02_preparation_eda.ipynb",
+    "executed_code_cells": 10,
+    "embedded_figures": 4,
+    "errors": 0
+  },
+  "visual_review": "Four PNG figures and rendered HTML notebook inspected; labels and units readable",
+  "not_implemented": "Model fitting, learned preprocessing and prediction metrics belong to stage 3"
+}

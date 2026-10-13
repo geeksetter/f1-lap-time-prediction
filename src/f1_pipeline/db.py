@@ -49,6 +49,7 @@ def connect(url=None):
 def init_db(url=None):
     with connect(url) as conn:
         conn.execute((ROOT / "sql/001_schema.sql").read_text())
+        conn.execute((ROOT / "sql/004_preparation_schema.sql").read_text())
 
 
 def natural_key(endpoint, row):

@@ -1,6 +1,5 @@
 """Synthetic fixtures are confined to tests, never reported as OpenF1 observations."""
 
-import os
 from datetime import UTC, datetime
 
 import psycopg
@@ -8,7 +7,7 @@ import pytest
 
 from f1_pipeline.api import Batch, digest
 from f1_pipeline.collect import collect_year
-from f1_pipeline.db import connect, counts, init_db
+from f1_pipeline.db import connect, counts
 from f1_pipeline.quality import inspect_database
 
 
@@ -75,19 +74,6 @@ class FixtureClient:
             digest(rows),
             1,
         )
-
-
-@pytest.fixture
-def test_url():
-    url = os.getenv("TEST_DATABASE_URL")
-    if not url:
-        pytest.skip("Set TEST_DATABASE_URL to a dedicated database ending in _test")
-    if not psycopg.conninfo.conninfo_to_dict(url)["dbname"].endswith("_test"):
-        pytest.fail("Safety guard: test database must end in _test")
-    init_db(url)
-    with connect(url) as conn:
-        conn.execute("TRUNCATE f1.ingestion_runs,f1.meetings CASCADE")
-    return url
 
 
 @pytest.mark.integration

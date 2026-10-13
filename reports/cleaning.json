@@ -1,0 +1,575 @@
+{
+  "accepted_profiles": [
+    {
+      "air_max": 22.6,
+      "air_min": 21.5,
+      "compounds": 3,
+      "drivers": 20,
+      "max_seconds": 83.489,
+      "min_seconds": 76.33,
+      "missing_history": 20,
+      "n": 1207,
+      "track_max": 33.4,
+      "track_min": 26.8,
+      "tyre_age_max": 32,
+      "tyre_age_min": 1,
+      "weather_age_max": 59.999,
+      "year": 2023
+    },
+    {
+      "air_max": 24.7,
+      "air_min": 23.6,
+      "compounds": 3,
+      "drivers": 20,
+      "max_seconds": 89.605,
+      "min_seconds": 77.115,
+      "missing_history": 20,
+      "n": 1166,
+      "track_max": 43.6,
+      "track_min": 38.3,
+      "tyre_age_max": 36,
+      "tyre_age_min": 1,
+      "weather_age_max": 59.882,
+      "year": 2024
+    },
+    {
+      "air_max": 29.6,
+      "air_min": 28.1,
+      "compounds": 3,
+      "drivers": 19,
+      "max_seconds": 90.665,
+      "min_seconds": 75.743,
+      "missing_history": 19,
+      "n": 989,
+      "track_max": 49.9,
+      "track_min": 46.5,
+      "tyre_age_max": 34,
+      "tyre_age_min": 1,
+      "weather_age_max": 59.948,
+      "year": 2025
+    }
+  ],
+  "by_race": [
+    {
+      "accepted": 1207,
+      "excluded": 105,
+      "excluded_share": 0.08003048780487805,
+      "raw": 1312,
+      "session_key": 9102,
+      "year": 2023
+    },
+    {
+      "accepted": 1166,
+      "excluded": 144,
+      "excluded_share": 0.1099236641221374,
+      "raw": 1310,
+      "session_key": 9539,
+      "year": 2024
+    },
+    {
+      "accepted": 989,
+      "excluded": 215,
+      "excluded_share": 0.17857142857142858,
+      "raw": 1204,
+      "session_key": 9971,
+      "year": 2025
+    }
+  ],
+  "checks": {
+    "feature_whitelist": true,
+    "history_lap_precedes_target": true,
+    "history_not_future": true,
+    "no_ambiguous_stints": true,
+    "one_candidate_per_raw_lap": true,
+    "raw_sources_unchanged": true,
+    "tyre_age_formula": true,
+    "unique_keys": true,
+    "weather_not_future": true
+  },
+  "configuration": {
+    "air_temperature_bounds_c": [
+      -20,
+      60
+    ],
+    "circuit": "Catalunya",
+    "history": "latest strictly completed earlier raw lap within same driver/session",
+    "target_trimming": false,
+    "track_temperature_bounds_c": [
+      -20,
+      80
+    ],
+    "weather_max_age_seconds": 120,
+    "years": [
+      2023,
+      2024,
+      2025
+    ]
+  },
+  "control_intervals": [
+    {
+      "censored": false,
+      "driver_number": null,
+      "end": "2025-06-01 14:23:12+00:00",
+      "event_ids": [
+        "205a67ceae93f5c974f6d22ece715c280d2e909b4c86cf99dcf114e557e154ba",
+        "efd9641f9463a86e0f59f1ca91ed81590e3c347ace5fe8b0e7798646d4e956f3",
+        "a4a01486594625ba4b95bac633236b9922888cea76849af56710055de18be24f",
+        "284698adb40a6c5192c40451b27c713528879b6cba443d91e7f70735e60eac88"
+      ],
+      "reason": "yellow_flag",
+      "scope": "Sector",
+      "sector": 12,
+      "session_key": 9971,
+      "start": "2025-06-01 14:16:46+00:00"
+    },
+    {
+      "censored": false,
+      "driver_number": null,
+      "end": "2025-06-01 14:28:21+00:00",
+      "event_ids": [
+        "5b56f38953a3b87effbf51804698f668cdc05245adfd965097f33d526283aa28",
+        "93755ce8e51be106287fdfd84125340747a3f1fb382c7af028cd3cbcf603781e",
+        "ab8144faeacfae3aa44a5817592071159acfea44c7a5e5c1bcedb5922aba9c71"
+      ],
+      "reason": "safety_car",
+      "scope": "Track",
+      "sector": null,
+      "session_key": 9971,
+      "start": "2025-06-01 14:17:01+00:00"
+    }
+  ],
+  "coverage": {
+    "drivers": [
+      {
+        "n": 20,
+        "session_key": 9102
+      },
+      {
+        "n": 20,
+        "session_key": 9539
+      },
+      {
+        "n": 19,
+        "session_key": 9971
+      }
+    ],
+    "laps": [
+      {
+        "n": 1312,
+        "session_key": 9102
+      },
+      {
+        "n": 1310,
+        "session_key": 9539
+      },
+      {
+        "n": 1204,
+        "session_key": 9971
+      }
+    ],
+    "race_control": [
+      {
+        "n": 49,
+        "session_key": 9102
+      },
+      {
+        "n": 107,
+        "session_key": 9539
+      },
+      {
+        "n": 102,
+        "session_key": 9971
+      }
+    ],
+    "stints": [
+      {
+        "n": 63,
+        "session_key": 9102
+      },
+      {
+        "n": 62,
+        "session_key": 9539
+      },
+      {
+        "n": 73,
+        "session_key": 9971
+      }
+    ],
+    "weather": [
+      {
+        "n": 154,
+        "session_key": 9102
+      },
+      {
+        "n": 154,
+        "session_key": 9539
+      },
+      {
+        "n": 155,
+        "session_key": 9971
+      }
+    ]
+  },
+  "excluded_examples": [
+    {
+      "driver_number": 2,
+      "exclusion_reasons": [
+        "first_lap",
+        "invalid_temperature",
+        "missing_start",
+        "missing_target",
+        "missing_weather",
+        "unknown_rainfall"
+      ],
+      "lap_duration": null,
+      "lap_number": 1,
+      "year": 2023
+    },
+    {
+      "driver_number": 16,
+      "exclusion_reasons": [
+        "first_lap",
+        "invalid_temperature",
+        "missing_start",
+        "missing_target",
+        "missing_weather",
+        "unknown_rainfall"
+      ],
+      "lap_duration": null,
+      "lap_number": 1,
+      "year": 2023
+    },
+    {
+      "driver_number": 23,
+      "exclusion_reasons": [
+        "first_lap",
+        "invalid_temperature",
+        "missing_start",
+        "missing_target",
+        "missing_weather",
+        "unknown_rainfall"
+      ],
+      "lap_duration": null,
+      "lap_number": 1,
+      "year": 2024
+    },
+    {
+      "driver_number": 12,
+      "exclusion_reasons": [
+        "invalid_tyre_age",
+        "missing_stint",
+        "missing_target",
+        "unknown_compound"
+      ],
+      "lap_duration": null,
+      "lap_number": 54,
+      "year": 2025
+    },
+    {
+      "driver_number": 23,
+      "exclusion_reasons": [
+        "invalid_tyre_age",
+        "missing_stint",
+        "missing_target",
+        "unknown_compound"
+      ],
+      "lap_duration": null,
+      "lap_number": 28,
+      "year": 2025
+    },
+    {
+      "driver_number": 1,
+      "exclusion_reasons": [
+        "pit_in",
+        "safety_car",
+        "yellow_flag"
+      ],
+      "lap_duration": 94.644,
+      "lap_number": 55,
+      "year": 2025
+    },
+    {
+      "driver_number": 1,
+      "exclusion_reasons": [
+        "pit_out",
+        "safety_car",
+        "yellow_flag"
+      ],
+      "lap_duration": 145.126,
+      "lap_number": 56,
+      "year": 2025
+    },
+    {
+      "driver_number": 4,
+      "exclusion_reasons": [
+        "pit_in",
+        "safety_car",
+        "yellow_flag"
+      ],
+      "lap_duration": 93.197,
+      "lap_number": 55,
+      "year": 2025
+    }
+  ],
+  "generated_at": "2026-10-13 21:37:55.525722+00:00",
+  "input_sha256": "96e536ef48c60ffc62f7aaa6a41a6e52aece5bda431cf43868c52a2559c715b6",
+  "output_sha256": "f399331ef2ca4afb40c3e07aef5eaf55a9696fa9669fcb2ed83f408cbb05d1f8",
+  "policy_version": "ordinary-dry-v1",
+  "rain_intervals": [
+    {
+      "censored": false,
+      "driver_number": null,
+      "end": "2024-06-23 13:07:38.223000+00:00",
+      "event_ids": [],
+      "reason": "rain",
+      "scope": "Track",
+      "sector": null,
+      "session_key": 9539,
+      "start": "2024-06-23 13:06:38.206000+00:00"
+    }
+  ],
+  "raw_table_counts": {
+    "drivers": 59,
+    "laps": 3826,
+    "meetings": 3,
+    "race_control": 258,
+    "sessions": 3,
+    "stints": 198,
+    "weather": 463
+  },
+  "reason_counts": [
+    {
+      "by_year": {
+        "2023": 20,
+        "2024": 20,
+        "2025": 19
+      },
+      "count": 59,
+      "description": "Первый круг: стартовая процедура",
+      "reason": "first_lap",
+      "share_of_all": 0.015420805018295871
+    },
+    {
+      "by_year": {
+        "2023": 2,
+        "2024": 1,
+        "2025": 0
+      },
+      "count": 3,
+      "description": "Пропуск / неконечная / физически неправдоподобная температура",
+      "reason": "invalid_temperature",
+      "share_of_all": 0.0007841087297438578
+    },
+    {
+      "by_year": {
+        "2023": 0,
+        "2024": 0,
+        "2025": 2
+      },
+      "count": 2,
+      "description": "Нет возраста шин или возраст отрицательный",
+      "reason": "invalid_tyre_age",
+      "share_of_all": 0.0005227391531625719
+    },
+    {
+      "by_year": {
+        "2023": 2,
+        "2024": 1,
+        "2025": 0
+      },
+      "count": 3,
+      "description": "Нет времени начала круга",
+      "reason": "missing_start",
+      "share_of_all": 0.0007841087297438578
+    },
+    {
+      "by_year": {
+        "2023": 0,
+        "2024": 0,
+        "2025": 2
+      },
+      "count": 2,
+      "description": "Нет подходящего отрезка",
+      "reason": "missing_stint",
+      "share_of_all": 0.0005227391531625719
+    },
+    {
+      "by_year": {
+        "2023": 2,
+        "2024": 1,
+        "2025": 2
+      },
+      "count": 5,
+      "description": "Нет времени круга",
+      "reason": "missing_target",
+      "share_of_all": 0.0013068478829064297
+    },
+    {
+      "by_year": {
+        "2023": 2,
+        "2024": 1,
+        "2025": 0
+      },
+      "count": 3,
+      "description": "Нет погодного наблюдения до начала",
+      "reason": "missing_weather",
+      "share_of_all": 0.0007841087297438578
+    },
+    {
+      "by_year": {
+        "2023": 43,
+        "2024": 42,
+        "2025": 54
+      },
+      "count": 139,
+      "description": "Круг перед pit-out / сменой отрезка (ретроспективный вывод)",
+      "reason": "pit_in",
+      "share_of_all": 0.03633037114479874
+    },
+    {
+      "by_year": {
+        "2023": 43,
+        "2024": 42,
+        "2025": 54
+      },
+      "count": 139,
+      "description": "Круг выезда из боксов по OpenF1",
+      "reason": "pit_out",
+      "share_of_all": 0.03633037114479874
+    },
+    {
+      "by_year": {
+        "2023": 0,
+        "2024": 40,
+        "2025": 0
+      },
+      "count": 40,
+      "description": "Пересечение с интервалом rainfall=1",
+      "reason": "rain",
+      "share_of_all": 0.010454783063251438
+    },
+    {
+      "by_year": {
+        "2023": 0,
+        "2024": 0,
+        "2025": 113
+      },
+      "count": 113,
+      "description": "Пересечение с Safety Car",
+      "reason": "safety_car",
+      "share_of_all": 0.02953476215368531
+    },
+    {
+      "by_year": {
+        "2023": 0,
+        "2024": 0,
+        "2025": 2
+      },
+      "count": 2,
+      "description": "Нет поддерживаемого состава шин",
+      "reason": "unknown_compound",
+      "share_of_all": 0.0005227391531625719
+    },
+    {
+      "by_year": {
+        "2023": 2,
+        "2024": 1,
+        "2025": 0
+      },
+      "count": 3,
+      "description": "Нет достоверного rainfall на начало / в течение круга",
+      "reason": "unknown_rainfall",
+      "share_of_all": 0.0007841087297438578
+    },
+    {
+      "by_year": {
+        "2023": 0,
+        "2024": 0,
+        "2025": 72
+      },
+      "count": 72,
+      "description": "Пересечение с жёлтым флагом (консервативно для всего круга)",
+      "reason": "yellow_flag",
+      "share_of_all": 0.01881860951385259
+    }
+  ],
+  "reconciliation": {
+    "audited": 3826,
+    "eligible": 3362,
+    "rejected_in_training": 0,
+    "training": 3362
+  },
+  "run_id": "c65addbc-1b7b-44d9-8f47-9603c0f1e282",
+  "total": {
+    "accepted": 3362,
+    "excluded": 464,
+    "excluded_share": 0.12127548353371667,
+    "raw": 3826
+  },
+  "tyre_examples": [
+    {
+      "compound": "SOFT",
+      "driver_number": 63,
+      "lap_number": 1,
+      "session_key": 9539,
+      "stint_lap_start": 1,
+      "stint_number": 1,
+      "tyre_age_at_stint_start": 3,
+      "tyre_age_before_lap": 3
+    },
+    {
+      "compound": "SOFT",
+      "driver_number": 63,
+      "lap_number": 15,
+      "session_key": 9539,
+      "stint_lap_start": 1,
+      "stint_number": 1,
+      "tyre_age_at_stint_start": 3,
+      "tyre_age_before_lap": 17
+    },
+    {
+      "compound": "MEDIUM",
+      "driver_number": 63,
+      "lap_number": 16,
+      "session_key": 9539,
+      "stint_lap_start": 16,
+      "stint_number": 2,
+      "tyre_age_at_stint_start": 0,
+      "tyre_age_before_lap": 0
+    },
+    {
+      "compound": "MEDIUM",
+      "driver_number": 63,
+      "lap_number": 17,
+      "session_key": 9539,
+      "stint_lap_start": 16,
+      "stint_number": 2,
+      "tyre_age_at_stint_start": 0,
+      "tyre_age_before_lap": 1
+    },
+    {
+      "compound": "HARD",
+      "driver_number": 63,
+      "lap_number": 37,
+      "session_key": 9539,
+      "stint_lap_start": 37,
+      "stint_number": 3,
+      "tyre_age_at_stint_start": 0,
+      "tyre_age_before_lap": 0
+    },
+    {
+      "compound": "HARD",
+      "driver_number": 63,
+      "lap_number": 38,
+      "session_key": 9539,
+      "stint_lap_start": 37,
+      "stint_number": 3,
+      "tyre_age_at_stint_start": 0,
+      "tyre_age_before_lap": 1
+    }
+  ],
+  "warnings": {
+    "previous_completed_lap_not_adjacent": 1836,
+    "unusual_duration_review_only": 47
+  }
+}
