@@ -1,0 +1,8 @@
+{
+  "tests_passed": 12,
+  "real_source_session_scope_checked": true,
+  "actual_source_rows_laps": 3826,
+  "notebook_executed": true,
+  "native_postgres_start_checked": true,
+  "docker_runtime_checked": false
+}
