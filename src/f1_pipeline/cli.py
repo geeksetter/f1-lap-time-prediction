@@ -14,7 +14,7 @@ from .quality import write_report
 
 def main():
     parser = argparse.ArgumentParser(
-        description="OpenF1 -> PostgreSQL -> ordinary laps -> EDA"
+        description="OpenF1 -> PostgreSQL -> ordinary laps -> OOP regression -> evaluation"
     )
     parser.add_argument("--verbose", action="store_true")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -150,7 +150,7 @@ def main():
             base_url=os.getenv("OPENF1_BASE_URL", "https://api.openf1.org/v1"),
             timeout=float(os.getenv("OPENF1_TIMEOUT", "60")),
             attempts=int(os.getenv("OPENF1_ATTEMPTS", "4")),
-            min_interval=float(os.getenv("OPENF1_MIN_INTERVAL", ".6")),
+            min_interval=float(os.getenv("OPENF1_MIN_INTERVAL", "2.1")),
         )
         try:
             runs = [

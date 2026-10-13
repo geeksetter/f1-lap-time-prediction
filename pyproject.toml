@@ -5,13 +5,14 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "f1-lap-time-prediction"
 version = "0.1.0"
-description = "Reproducible OpenF1 ingestion, lap preparation and EDA from PostgreSQL"
+description = "Reproducible OpenF1/PostgreSQL pipeline with an own OOP linear regression"
 requires-python = ">=3.11"
 dependencies = ["requests>=2.32,<3", "psycopg[binary]>=3.2,<4", "python-dotenv>=1,<2", "numpy>=2,<3", "pandas>=2.2,<3", "matplotlib>=3.9,<4"]
 
 [project.optional-dependencies]
 dev = ["pytest>=8,<10"]
 notebook = ["nbformat>=5,<6", "nbclient>=0.10,<1", "ipykernel>=6,<8", "nbconvert>=7,<8"]
+report = ["python-docx==1.2.0"]
 
 [project.scripts]
 f1-pipeline = "f1_pipeline.cli:main"
