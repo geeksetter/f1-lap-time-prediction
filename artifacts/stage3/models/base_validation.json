@@ -1,0 +1,156 @@
+{
+  "format_version": 1,
+  "feature_set": "base",
+  "transformer": {
+    "version": 1,
+    "numeric": [
+      "lap_number"
+    ],
+    "categorical": [
+      "driver_name"
+    ],
+    "medians": [
+      34.0
+    ],
+    "means": [
+      34.16404308202154
+    ],
+    "scales": [
+      18.888885389977133
+    ],
+    "minima": [
+      2.0
+    ],
+    "maxima": [
+      66.0
+    ],
+    "categories": {
+      "driver_name": [
+        "Alexander ALBON",
+        "Carlos SAINZ",
+        "Charles LECLERC",
+        "Esteban OCON",
+        "Fernando ALONSO",
+        "George RUSSELL",
+        "Kevin MAGNUSSEN",
+        "Lance STROLL",
+        "Lando NORRIS",
+        "Lewis HAMILTON",
+        "Logan SARGEANT",
+        "Max VERSTAPPEN",
+        "Nico HULKENBERG",
+        "Nyck DE VRIES",
+        "Oscar PIASTRI",
+        "Pierre GASLY",
+        "Sergio PEREZ",
+        "Valtteri BOTTAS",
+        "Yuki TSUNODA",
+        "ZHOU Guanyu"
+      ]
+    },
+    "frequencies": {
+      "driver_name": [
+        0.04971002485501243,
+        0.050538525269262634,
+        0.050538525269262634,
+        0.050538525269262634,
+        0.050538525269262634,
+        0.050538525269262634,
+        0.048053024026512015,
+        0.050538525269262634,
+        0.04888152444076222,
+        0.050538525269262634,
+        0.04971002485501243,
+        0.050538525269262634,
+        0.048053024026512015,
+        0.04971002485501243,
+        0.04971002485501243,
+        0.050538525269262634,
+        0.050538525269262634,
+        0.04971002485501243,
+        0.050538525269262634,
+        0.050538525269262634
+      ]
+    },
+    "output_names": [
+      "lap_number",
+      "driver_name=Alexander ALBON (centered)",
+      "driver_name=Carlos SAINZ (centered)",
+      "driver_name=Charles LECLERC (centered)",
+      "driver_name=Esteban OCON (centered)",
+      "driver_name=Fernando ALONSO (centered)",
+      "driver_name=George RUSSELL (centered)",
+      "driver_name=Kevin MAGNUSSEN (centered)",
+      "driver_name=Lance STROLL (centered)",
+      "driver_name=Lando NORRIS (centered)",
+      "driver_name=Lewis HAMILTON (centered)",
+      "driver_name=Logan SARGEANT (centered)",
+      "driver_name=Max VERSTAPPEN (centered)",
+      "driver_name=Nico HULKENBERG (centered)",
+      "driver_name=Nyck DE VRIES (centered)",
+      "driver_name=Oscar PIASTRI (centered)",
+      "driver_name=Pierre GASLY (centered)",
+      "driver_name=Sergio PEREZ (centered)",
+      "driver_name=Valtteri BOTTAS (centered)",
+      "driver_name=Yuki TSUNODA (centered)"
+    ],
+    "encoding": "centered_train_frequency_k_minus_one",
+    "unknown_category": "zero_contrasts_train_weighted_average_effect"
+  },
+  "regressor": {
+    "type": "MultipleLinearRegression",
+    "version": 1,
+    "algorithm": "ordinary_least_squares_explicit_svd_pseudoinverse_eps_max_shape",
+    "intercept": 80.15305219552604,
+    "coefficients": [
+      -0.8742104451753953,
+      0.47176624796173555,
+      -0.3071835776479024,
+      -0.042996093648782804,
+      0.024431304456702874,
+      -0.05141217325987624,
+      -0.5338702770684833,
+      0.2931532410667806,
+      -0.07135558078922154,
+      0.03706411444739733,
+      -0.6763334558257693,
+      0.8245995812951026,
+      -0.9877310608124407,
+      0.004695250100497689,
+      0.2115892622331027,
+      0.21205474082607334,
+      -0.021087298174055386,
+      -0.49895133169675676,
+      0.8024007693688145,
+      0.01310759796794818
+    ],
+    "n_features": 20,
+    "n_samples": 1207,
+    "rank": 21,
+    "full_rank": true,
+    "singular_values": [
+      34.74215889550994,
+      34.741905532080416,
+      7.810249675906659,
+      7.810249675906658,
+      7.810249675906657,
+      7.810249675906655,
+      7.810249675906654,
+      7.810249675906654,
+      7.810249675906654,
+      7.810249675906654,
+      7.810249675906653,
+      7.809328221619883,
+      7.767213439460697,
+      7.745966692414837,
+      7.745966692414833,
+      7.74596669241483,
+      7.745904329262399,
+      7.6877236831448235,
+      7.631281321877211,
+      7.61577278276369,
+      1.745876786020731
+    ],
+    "condition_number": 19.899547994274897
+  }
+}

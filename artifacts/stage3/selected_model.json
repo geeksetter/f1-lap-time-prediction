@@ -1,0 +1,187 @@
+{
+  "format_version": 1,
+  "feature_set": "tyres",
+  "transformer": {
+    "version": 1,
+    "numeric": [
+      "lap_number",
+      "tyre_age_before_lap"
+    ],
+    "categorical": [
+      "driver_name",
+      "compound"
+    ],
+    "medians": [
+      35.0,
+      11.0
+    ],
+    "means": [
+      34.664559629161396,
+      11.966287399915718
+    ],
+    "scales": [
+      18.619337417308714,
+      7.064548070497362
+    ],
+    "minima": [
+      2.0,
+      1.0
+    ],
+    "maxima": [
+      66.0,
+      36.0
+    ],
+    "categories": {
+      "driver_name": [
+        "Alexander ALBON",
+        "Carlos SAINZ",
+        "Charles LECLERC",
+        "Daniel RICCIARDO",
+        "Esteban OCON",
+        "Fernando ALONSO",
+        "George RUSSELL",
+        "Kevin MAGNUSSEN",
+        "Lance STROLL",
+        "Lando NORRIS",
+        "Lewis HAMILTON",
+        "Logan SARGEANT",
+        "Max VERSTAPPEN",
+        "Nico HULKENBERG",
+        "Nyck DE VRIES",
+        "Oscar PIASTRI",
+        "Pierre GASLY",
+        "Sergio PEREZ",
+        "Valtteri BOTTAS",
+        "Yuki TSUNODA",
+        "ZHOU Guanyu"
+      ],
+      "compound": [
+        "HARD",
+        "MEDIUM",
+        "SOFT"
+      ]
+    },
+    "frequencies": {
+      "driver_name": [
+        0.049726085124315214,
+        0.05056890012642225,
+        0.05056890012642225,
+        0.024441635061104087,
+        0.05056890012642225,
+        0.05014749262536873,
+        0.05056890012642225,
+        0.048883270122208174,
+        0.05014749262536873,
+        0.049726085124315214,
+        0.05056890012642225,
+        0.0493046776232617,
+        0.05056890012642225,
+        0.0493046776232617,
+        0.025284450063211124,
+        0.05014749262536873,
+        0.05056890012642225,
+        0.049726085124315214,
+        0.049726085124315214,
+        0.0493046776232617,
+        0.05014749262536873
+      ],
+      "compound": [
+        0.36030341340075855,
+        0.32574799831437,
+        0.3139485882848715
+      ]
+    },
+    "output_names": [
+      "lap_number",
+      "tyre_age_before_lap",
+      "driver_name=Alexander ALBON (centered)",
+      "driver_name=Carlos SAINZ (centered)",
+      "driver_name=Charles LECLERC (centered)",
+      "driver_name=Daniel RICCIARDO (centered)",
+      "driver_name=Esteban OCON (centered)",
+      "driver_name=Fernando ALONSO (centered)",
+      "driver_name=George RUSSELL (centered)",
+      "driver_name=Kevin MAGNUSSEN (centered)",
+      "driver_name=Lance STROLL (centered)",
+      "driver_name=Lando NORRIS (centered)",
+      "driver_name=Lewis HAMILTON (centered)",
+      "driver_name=Logan SARGEANT (centered)",
+      "driver_name=Max VERSTAPPEN (centered)",
+      "driver_name=Nico HULKENBERG (centered)",
+      "driver_name=Nyck DE VRIES (centered)",
+      "driver_name=Oscar PIASTRI (centered)",
+      "driver_name=Pierre GASLY (centered)",
+      "driver_name=Sergio PEREZ (centered)",
+      "driver_name=Valtteri BOTTAS (centered)",
+      "driver_name=Yuki TSUNODA (centered)",
+      "compound=HARD (centered)",
+      "compound=MEDIUM (centered)"
+    ],
+    "encoding": "centered_train_frequency_k_minus_one",
+    "unknown_category": "zero_contrasts_train_weighted_average_effect"
+  },
+  "regressor": {
+    "type": "MultipleLinearRegression",
+    "version": 1,
+    "algorithm": "ordinary_least_squares_explicit_svd_pseudoinverse_eps_max_shape",
+    "intercept": 80.36503497682254,
+    "coefficients": [
+      -1.0273352361297141,
+      0.497192481393374,
+      0.6667264250609302,
+      -0.501922898419121,
+      -0.45362418676612004,
+      0.9178033815487544,
+      -0.07679393210576725,
+      0.039995412218001375,
+      -0.7433733320693117,
+      0.5544856231449248,
+      0.06367735303049933,
+      -0.510238864611633,
+      -0.9368332222597241,
+      1.0980216117324517,
+      -1.0835057401019434,
+      0.03033504974237212,
+      -0.11328843536357083,
+      -0.3063667833138708,
+      -0.16963213724353857,
+      -0.5432331659897299,
+      0.6487617584297645,
+      0.34553655976462266,
+      -0.12257653198490673,
+      -0.09528745911924187
+    ],
+    "n_features": 24,
+    "n_samples": 2373,
+    "rank": 25,
+    "full_rank": true,
+    "singular_values": [
+      59.89330198092767,
+      48.7134478352744,
+      35.80593746405543,
+      27.011809151091118,
+      15.98519851946857,
+      10.954451150103333,
+      10.954451150103317,
+      10.954435664153367,
+      10.952364929058218,
+      10.938203587914073,
+      10.918357841861631,
+      10.913119953517539,
+      10.903691700455417,
+      10.883002263715145,
+      10.867253199804608,
+      10.862403271535932,
+      10.849347424699495,
+      10.821107726563225,
+      10.811929483588758,
+      10.782028854184054,
+      10.39897788166363,
+      9.537043321461743,
+      7.837524206466965,
+      7.659735611269678,
+      2.3380995589603684
+    ],
+    "condition_number": 25.616232530131914
+  }
+}

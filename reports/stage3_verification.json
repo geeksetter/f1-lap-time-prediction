@@ -1,0 +1,94 @@
+{
+  "generated_at": "2026-10-13T22:12:29.005082+00:00",
+  "local_tests_passed": 51,
+  "known_solution": {
+    "formula": "y=4+2*x1-3*x2",
+    "actual_intercept": 4.0,
+    "actual_coefficients": [
+      2.0000000000000004,
+      -3.000000000000001
+    ],
+    "prediction_for_3_2": 4.0,
+    "max_abs_prediction_error": 3.552713678800501e-15,
+    "save_load_max_abs_difference": 0.0
+  },
+  "real_model_serialization_max_abs_difference": {
+    "base": 0.0,
+    "tyres": 0.0,
+    "weather": 0.0
+  },
+  "repeat": {
+    "model_files_unchanged": true,
+    "manifest_unchanged": true,
+    "test_predictions_csv_unchanged": true
+  },
+  "test_targets_read_during_training": false,
+  "split": {
+    "test": [
+      9971
+    ],
+    "train": [
+      9102
+    ],
+    "validation": [
+      9539
+    ]
+  },
+  "source_counts": {
+    "meetings": 3,
+    "sessions": 3,
+    "drivers": 59,
+    "laps": 3826,
+    "stints": 198,
+    "weather": 463,
+    "race_control": 258
+  },
+  "test_n": 989,
+  "sql_metrics_crosscheck": {
+    "base": {
+      "mae_seconds": 0.9299858712161911,
+      "n": 989,
+      "r2": 0.2869624884683214,
+      "rmse_seconds": 1.2083632894823946
+    },
+    "last_correct": {
+      "mae_seconds": 0.6586682666516687,
+      "n": 989,
+      "r2": 0.46476736652360695,
+      "rmse_seconds": 1.0469179021464878
+    },
+    "mean_last3_correct": {
+      "mae_seconds": 0.6575681655394333,
+      "n": 989,
+      "r2": 0.5049351932464525,
+      "rmse_seconds": 1.0068675885286609
+    },
+    "tyres": {
+      "mae_seconds": 0.8525402728061674,
+      "n": 989,
+      "r2": 0.38060639735913326,
+      "rmse_seconds": 1.1262237759504314
+    },
+    "weather": {
+      "mae_seconds": 0.8567144385093537,
+      "n": 989,
+      "r2": 0.3762549851093445,
+      "rmse_seconds": 1.1301728697769016
+    }
+  },
+  "prediction_example": {
+    "driver_number": 1,
+    "lap_number": 40,
+    "lap_start_at": "2025-06-01 13:56:07.340000+00:00",
+    "mode": "historical pre-start feature replay; current lap target is not read",
+    "model": "tyres",
+    "prediction_seconds": 78.90700790885019,
+    "session_key": 9971,
+    "unknown_categories": {
+      "compound": 0,
+      "driver_name": 0
+    },
+    "weather_at": "2025-06-01 13:55:22.421000+00:00"
+  },
+  "visual_verification": "All six PNG figures inspected; residual comparison uses shared axes"
+}

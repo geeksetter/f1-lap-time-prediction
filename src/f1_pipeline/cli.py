@@ -38,6 +38,16 @@ def main():
     prepare.add_argument("--verify-repeat", action="store_true")
     eda = sub.add_parser("eda")
     eda.add_argument("--output", default=str(ROOT / "reports"))
+    train = sub.add_parser("train")
+    train.add_argument("--output", default=str(ROOT / "artifacts/stage3"))
+    evaluate = sub.add_parser("evaluate")
+    evaluate.add_argument("--artifacts", default=str(ROOT / "artifacts/stage3"))
+    evaluate.add_argument("--output", default=str(ROOT / "reports/modeling"))
+    predict = sub.add_parser("predict")
+    predict.add_argument("--artifacts", default=str(ROOT / "artifacts/stage3"))
+    predict.add_argument("--session", type=int, required=True)
+    predict.add_argument("--driver", type=int, required=True)
+    predict.add_argument("--lap", type=int, required=True)
     args = parser.parse_args()
     load_config()
     logging.basicConfig(
@@ -96,6 +106,42 @@ def main():
         result = write_eda(args.output)
         print(
             json.dumps({"rows": result["rows"], "figures": result["figures"]}, indent=2)
+        )
+    elif args.command == "train":
+        from .experiment import train_experiment
+
+        result = train_experiment(args.output)
+        print(
+            json.dumps(
+                {
+                    "selected_model": result["selected_model"],
+                    "split": result["split"],
+                    "validation_metrics": result["validation_metrics"],
+                },
+                indent=2,
+            )
+        )
+    elif args.command == "evaluate":
+        from .experiment import evaluate_experiment
+
+        result = evaluate_experiment(args.artifacts, args.output)
+        print(
+            json.dumps(
+                {
+                    "selected_model": result["selected_model"],
+                    "test_metrics": result["test_metrics"],
+                },
+                indent=2,
+            )
+        )
+    elif args.command == "predict":
+        from .experiment import predict_lap
+
+        print(
+            json.dumps(
+                predict_lap(args.artifacts, args.session, args.driver, args.lap),
+                indent=2,
+            )
         )
     elif args.command == "collect":
         if any(y < 2023 for y in args.years):
