@@ -1,0 +1,30 @@
+{
+  "history_blobs_checked": 117,
+  "credential_matches": 0,
+  "checked_working_files": 96,
+  "credential_signatures_found": 0,
+  "local_password_matches": 0,
+  "excluded": [
+    ".env",
+    ".venv/bin/python",
+    ".local/pgdata/PG_VERSION",
+    ".idea/workspace.xml",
+    ".vscode/settings.json"
+  ],
+  "files_over_1MB": [
+    {
+      "path": "docs/practice_report.docx",
+      "bytes": 1368685,
+      "purpose": "practice report, not raw data"
+    },
+    {
+      "path": "docs/practice_report.pdf",
+      "bytes": 2130980,
+      "purpose": "practice report, not raw data"
+    }
+  ],
+  "history_preserved": true,
+  "data_usage_notice": "DATA_USAGE.md",
+  "raw_api_and_postgresql_published": false,
+  "synced_sources_edited": false
+}

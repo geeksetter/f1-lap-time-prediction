@@ -1,0 +1,234 @@
+{
+  "generated_at": "2026-10-13T22:32:29.195262+00:00",
+  "environment": {
+    "python": "3.12.6",
+    "platform": "Darwin arm64",
+    "postgresql": "16.14 (Homebrew)",
+    "dependencies": {
+      "numpy": "2.5.4",
+      "pandas": "2.3.3",
+      "matplotlib": "3.11.2",
+      "requests": "2.34.2",
+      "psycopg": "3.3.6",
+      "python-dotenv": "1.2.4",
+      "pytest": "9.1.1",
+      "ruff": "0.17.0",
+      "nbformat": "5.11.1",
+      "nbclient": "0.11.0"
+    }
+  },
+  "isolation": {
+    "fresh_virtual_environment": true,
+    "fresh_postgres_cluster": true,
+    "loopback_port": 55433,
+    "initial_source_counts": {
+      "meetings": 0,
+      "sessions": 0,
+      "drivers": 0,
+      "laps": 0,
+      "stints": 0,
+      "weather": 0,
+      "race_control": 0
+    },
+    "checkout": "independent local Git clone of ae8819f plus final packaging changes",
+    "docker_compose_config_valid": true,
+    "local_docker_daemon_running": false
+  },
+  "source_counts": {
+    "meetings": 3,
+    "sessions": 3,
+    "drivers": 59,
+    "laps": 3826,
+    "stints": 198,
+    "weather": 463,
+    "race_control": 258
+  },
+  "repeat_ingestion": {
+    "first_runs": [
+      "89305ef4-0a63-484a-9e89-d28b74af8c9f",
+      "279bbc3e-6d0d-45d1-a173-50ba28537e1e",
+      "db7eedbe-1310-4d75-a290-b5eb1cc9680a"
+    ],
+    "repeat_runs": [
+      "00ffe0e1-c713-4540-a1be-00b0eec4823a",
+      "127f41c7-7142-462c-a3c8-340030e9b987",
+      "cb01b318-5e30-40f2-948e-a7eef91a4d7f"
+    ],
+    "before": {
+      "meetings": 3,
+      "sessions": 3,
+      "drivers": 59,
+      "laps": 3826,
+      "stints": 198,
+      "weather": 463,
+      "race_control": 258
+    },
+    "after": {
+      "meetings": 3,
+      "sessions": 3,
+      "drivers": 59,
+      "laps": 3826,
+      "stints": 198,
+      "weather": 463,
+      "race_control": 258
+    },
+    "counts_equal": true,
+    "response_hashes_equal": true
+  },
+  "repeat_preparation": {
+    "first_run": "0fe870cd-294a-4bef-adbd-190c0e985413",
+    "repeat_run": "7cb64a4c-8cc8-4311-a286-93f4f79ae9a4",
+    "input_hash_equal": true,
+    "output_hash_equal": true,
+    "counts_equal": true,
+    "before": {
+      "accepted": 3362,
+      "excluded": 464,
+      "excluded_share": 0.12127548353371667,
+      "raw": 3826
+    },
+    "after": {
+      "accepted": 3362,
+      "excluded": 464,
+      "excluded_share": 0.12127548353371667,
+      "raw": 3826
+    }
+  },
+  "preparation_checks": {
+    "feature_whitelist": true,
+    "history_lap_precedes_target": true,
+    "history_not_future": true,
+    "no_ambiguous_stints": true,
+    "one_candidate_per_raw_lap": true,
+    "raw_sources_unchanged": true,
+    "tyre_age_formula": true,
+    "unique_keys": true,
+    "weather_not_future": true
+  },
+  "cohort": {
+    "accepted": 3362,
+    "excluded": 464,
+    "excluded_share": 0.12127548353371667,
+    "raw": 3826
+  },
+  "selected_model": "tyres",
+  "test_metrics": {
+    "base": {
+      "adjusted_r2": null,
+      "adjusted_r2_note": "holdout/group: classical adjusted R2 is an in-sample OLS statistic",
+      "bias_seconds": -0.6544880994896872,
+      "mae_seconds": 0.9299858712161915,
+      "n": 989,
+      "r2": 0.28696248846832184,
+      "rmse_seconds": 1.2083632894823944,
+      "target_std_seconds": 1.4310056018130481
+    },
+    "last_correct": {
+      "adjusted_r2": null,
+      "adjusted_r2_note": "holdout/group: classical adjusted R2 is an in-sample OLS statistic",
+      "bias_seconds": 0.006541177137300872,
+      "mae_seconds": 0.6586682666516684,
+      "n": 989,
+      "r2": 0.4647673665236085,
+      "rmse_seconds": 1.0469179021464865,
+      "target_std_seconds": 1.4310056018130481
+    },
+    "mean_last3_correct": {
+      "adjusted_r2": null,
+      "adjusted_r2_note": "holdout/group: classical adjusted R2 is an in-sample OLS statistic",
+      "bias_seconds": 0.07663858192327994,
+      "mae_seconds": 0.6575681655394339,
+      "n": 989,
+      "r2": 0.5049351932464532,
+      "rmse_seconds": 1.0068675885286602,
+      "target_std_seconds": 1.4310056018130481
+    },
+    "tyres": {
+      "adjusted_r2": null,
+      "adjusted_r2_note": "holdout/group: classical adjusted R2 is an in-sample OLS statistic",
+      "bias_seconds": -0.6658079286776231,
+      "mae_seconds": 0.8525402728061674,
+      "n": 989,
+      "r2": 0.3806063973591334,
+      "rmse_seconds": 1.1262237759504314,
+      "target_std_seconds": 1.4310056018130481
+    },
+    "weather": {
+      "adjusted_r2": null,
+      "adjusted_r2_note": "holdout/group: classical adjusted R2 is an in-sample OLS statistic",
+      "bias_seconds": -0.6736693644986413,
+      "mae_seconds": 0.8567144385093544,
+      "n": 989,
+      "r2": 0.3762549851093452,
+      "rmse_seconds": 1.1301728697769011,
+      "target_std_seconds": 1.4310056018130481
+    }
+  },
+  "published_metrics_max_abs_difference": {
+    "base": {
+      "mae_seconds": 0.0,
+      "rmse_seconds": 0.0,
+      "r2": 0.0
+    },
+    "last_correct": {
+      "mae_seconds": 0.0,
+      "rmse_seconds": 0.0,
+      "r2": 0.0
+    },
+    "mean_last3_correct": {
+      "mae_seconds": 0.0,
+      "rmse_seconds": 0.0,
+      "r2": 0.0
+    },
+    "tyres": {
+      "mae_seconds": 0.0,
+      "rmse_seconds": 0.0,
+      "r2": 0.0
+    },
+    "weather": {
+      "mae_seconds": 0.0,
+      "rmse_seconds": 0.0,
+      "r2": 0.0
+    }
+  },
+  "notebooks": {
+    "01_data_quality": "all cells executed against fresh PostgreSQL",
+    "02_preparation_eda": "all cells executed against fresh PostgreSQL"
+  },
+  "tests": {
+    "offline_passed": 40,
+    "postgresql_passed": 11,
+    "postgresql_stdout": "...........                                                              [100%]\n11 passed, 40 deselected in 2.42s"
+  },
+  "prediction_example": {
+    "session": 9971,
+    "driver": 1,
+    "lap": 40,
+    "seconds": 78.90700790885019
+  },
+  "limitations": [
+    "Native PostgreSQL path actually exercised; local Docker startup not exercised",
+    "DBeaver automation was denied; screenshot requires manual capture",
+    "Test is held out from fitting and selection, but prior EDA exposed the race to the author"
+  ],
+  "documents": {
+    "pdf_pages": 63,
+    "all_pages_visually_reviewed": true,
+    "markdown_source": "docs/practice_report.md",
+    "editable_document": "docs/practice_report.docx",
+    "pdf": "docs/practice_report.pdf",
+    "qa": "render_docx.py followed by review of all 63 PNG pages; tables and figures checked",
+    "student_actions_remaining": [
+      "DBeaver ER screenshot",
+      "title-page details and signatures",
+      "departmental forms, approval and norm-control review"
+    ]
+  },
+  "frozen_modeling_code_unchanged": true,
+  "ci_verified_packaging_commit": {
+    "sha": "1392ffe04e6ee49bb2564ad24f097ea73668cf3a",
+    "url": "https://github.com/geeksetter/f1-lap-time-prediction/actions/runs/38479648565",
+    "offline": "success",
+    "postgresql": "success"
+  }
+}
